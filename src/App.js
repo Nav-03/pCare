@@ -1,23 +1,12 @@
-import logo from "../src/front/logo.svg";
 import "../src/css/App.css";
+import { DatePicker } from "../src/components/datePicker.js";
+import { MedicationTable } from "../src/components/medicationTable.js";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MedicationTable />
+      <DatePicker />
     </div>
   );
 }
