@@ -5,8 +5,8 @@ import { MedicationTable } from "../src/components/medicationTable.js";
 function App() {
   return (
     <div className="App">
-      <MedicationTable />
       <DatePicker />
+      <MedicationTable />
     </div>
   );
 }
