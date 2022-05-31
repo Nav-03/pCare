@@ -1,12 +1,14 @@
 import "../src/css/App.css";
-import { DatePicker } from "../src/components/datePicker.js";
 import { MedicationTable } from "../src/components/medicationTable.js";
+import { NavBar } from "./components/navBar.js";
 
 function App() {
   return (
     <div className="App">
-      <DatePicker />
-      <MedicationTable />
+      <NavBar />
+      <div>
+        <MedicationTable />
+      </div>
     </div>
   );
 }
