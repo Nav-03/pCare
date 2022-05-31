@@ -1,15 +1,24 @@
 import "../src/css/App.css";
 import { MedicationTable } from "../src/components/medicationTable.js";
 import { NavBar } from "./components/navBar.js";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <div>
-        <MedicationTable />
-      </div>
-    </div>
+    <>
+      <Box sx={{ flexGrow: 1 }} className="App">
+        <NavBar />
+        <Grid container spacing={4}>
+          <Grid item xs={12} sm={6}>
+            <MedicationTable />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <MedicationTable />
+          </Grid>
+        </Grid>
+      </Box>
+    </>
   );
 }
 

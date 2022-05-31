@@ -8,7 +8,7 @@ import {
 
 export const MedicationTable = () => {
   return (
-    <div style={{ height: 300, width: "50%" }}>
+    <div style={{ height: 350, width: "100%" }}>
       <DataGrid rows={rows} columns={columns} />
     </div>
   );
@@ -18,7 +18,7 @@ const columns = [
   {
     field: "Perscription",
     headerName: "Perscription",
-    width: 220,
+    width: 180,
     editable: true,
   },
   {
@@ -32,14 +32,14 @@ const columns = [
     field: "dateCreated",
     headerName: "Next Dosage",
     type: "dateTime",
-    width: 220,
+    width: 180,
     editable: true,
   },
   {
     field: "lastLogin",
     headerName: "Last Dosage",
     type: "dateTime",
-    width: 220,
+    width: 180,
     editable: true,
   },
 ];
