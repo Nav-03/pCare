@@ -1,5 +1,6 @@
 import "../src/css/App.css";
 import { MedicationTable } from "../src/components/medicationTable.js";
+import { AppointmentsTable } from "../src/components/appointmentsTable.js";
 import { NavBar } from "./components/navBar.js";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -14,7 +15,7 @@ function App() {
             <MedicationTable />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <MedicationTable />
+            <AppointmentsTable />
           </Grid>
         </Grid>
       </Box>
