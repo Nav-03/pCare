@@ -11,10 +11,24 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormGroup from "@mui/material/FormGroup";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
+import SpeedDial from "@mui/material/SpeedDial";
+// import SpeedDialIcon from "@mui/material/SpeedDialIcon";
+import SpeedDialAction from "@mui/material/SpeedDialAction";
+import FileCopyIcon from "@mui/icons-material/FileCopyOutlined";
+import SaveIcon from "@mui/icons-material/Save";
+import PrintIcon from "@mui/icons-material/Print";
+import ShareIcon from "@mui/icons-material/Share";
 
 export const NavBar = () => {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const actions = [
+    { icon: <FileCopyIcon />, name: "Copy" },
+    { icon: <SaveIcon />, name: "Save" },
+    { icon: <PrintIcon />, name: "Print" },
+    { icon: <ShareIcon />, name: "Share" },
+  ];
 
   const handleChange = (event) => {
     setAuth(event.target.checked);
@@ -54,7 +68,21 @@ export const NavBar = () => {
                 aria-haspopup="true"
                 color="inherit"
               >
-                <AccountCircle />
+                <SpeedDial
+                  ariaLabel="SpeedDial basic example"
+                  sx={{ position: "absolute", bottom: 16, right: 16 }}
+                  icon={<AccountCircle />}
+                >
+                  {actions.map((action) => (
+                    <SpeedDialAction
+                      key={action.name}
+                      icon={action.icon}
+                      tooltipTitle={action.name}
+                    />
+                  ))}
+                </SpeedDial>
+
+                {/* <AccountCircle /> */}
               </IconButton>
               <Menu
                 id="menu-appbar"
