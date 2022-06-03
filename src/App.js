@@ -2,7 +2,6 @@ import "../src/css/App.css";
 import { MedicationTable } from "../src/components/medicationTable.js";
 import { AppointmentsTable } from "../src/components/appointmentsTable.js";
 import { NavBar } from "./components/navBar.js";
-import { Sharing } from "../src/components/sharing.js";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
@@ -28,7 +27,6 @@ function App() {
           </Grid>
         </Grid>
       </Box>
-      <Sharing />
     </>
   );
 }
