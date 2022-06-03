@@ -10,7 +10,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormGroup from "@mui/material/FormGroup";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import { SharingButton } from "../components/sharingButton.js";
+import { SharingButton } from "./sharingButton.js";
 
 export const NavBar = () => {
   const [auth, setAuth] = React.useState(true);

@@ -5,14 +5,8 @@ import {
   randomTraderName,
   randomUpdatedDate,
 } from "@mui/x-data-grid-generator";
-
-export const MedicationTable = () => {
-  return (
-    <div style={{ height: 350, width: "100%" }}>
-      <DataGrid rows={rows} columns={columns} />
-    </div>
-  );
-};
+// import { red } from "@mui/material/colors";
+// import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const columns = [
   {
@@ -81,3 +75,21 @@ const rows = [
     lastLogin: randomUpdatedDate(),
   },
 ];
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: "#1976d2",
+//     },
+//   },
+// });
+
+export const MedicationTable = () => {
+  return (
+    // <ThemeProvider theme={theme}>
+    <div style={{ height: 350, width: "100%" }}>
+      Medications
+      <DataGrid rows={rows} columns={columns} />
+    </div>
+    // </ThemeProvider>
+  );
+};

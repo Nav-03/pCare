@@ -7,14 +7,6 @@ import {
   randomPhoneNumber,
 } from "@mui/x-data-grid-generator";
 
-export const AppointmentsTable = () => {
-  return (
-    <div style={{ height: 350, width: "100%" }}>
-      <DataGrid rows={rows} columns={columns} />
-    </div>
-  );
-};
-
 const columns = [
   {
     field: "doctor",
@@ -80,3 +72,12 @@ const rows = [
     address: randomAddress(),
   },
 ];
+
+export const AppointmentsTable = () => {
+  return (
+    <div style={{ height: 350, width: "100%" }}>
+      Appointments
+      <DataGrid rows={rows} columns={columns} />
+    </div>
+  );
+};

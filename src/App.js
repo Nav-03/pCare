@@ -1,4 +1,5 @@
 import "../src/css/App.css";
+import React from "react";
 import { MedicationTable } from "../src/components/medicationTable.js";
 import { AppointmentsTable } from "../src/components/appointmentsTable.js";
 import { NavBar } from "./components/navBar.js";
@@ -15,6 +16,7 @@ function App() {
           justifyContent: "space-around",
           flexDirection: "row",
           margin: 5,
+          backgroundColor: "transparent",
         }}
       >
         <NavBar />
